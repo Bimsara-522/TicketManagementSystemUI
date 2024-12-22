@@ -1,0 +1,68 @@
+div.elem-group {
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  .config{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+  
+  h1 {
+    text-align: center;
+    font-family: "Times New Roman",serif;
+  }
+
+  body {
+    width: 500px;
+    margin: 0 auto;
+    padding: 50px;
+  }
+
+  label {
+    display: block;
+    font-family: 'Nanum Gothic';
+    padding-bottom: 10px;
+    font-size: 1.25em;
+  }
+  
+  input, select, textarea {
+    border-radius: 2px;
+    border: 2px solid #777;
+    box-sizing: border-box;
+    font-size: 1.25em;
+    font-family: 'Nanum Gothic';
+    width: 50%;
+    padding: 10px;
+    
+  }
+
+  .pushable {
+    background: rgb(102, 102, 102);
+    border: none;
+    border-radius: 12px;
+    padding: 0;
+    cursor: pointer;
+  }
+  .front {
+    display: block;
+    padding: 12px 42px;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    background: black;
+    color: white;
+    transform: translateY(-4px);
+  }
+  
+  .pushable:focus:not(:focus-visible) {
+    outline: none;
+  } 
+
+
+   button {
+    display: block;
+    margin: 10px auto 0px auto;
+  }

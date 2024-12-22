@@ -1,0 +1,56 @@
+
+  <br><br>
+<h1>System Configuration</h1>
+<br>
+<div class="config">
+<form [formGroup]="configForm" (ngSubmit)="onSubmit()">
+  <div class="elem-group">
+  <label for="totalTickets">Total Tickets:</label>
+  <input id="totalTickets" formControlName="totalTickets" type="number" />
+</div>
+
+<div class="elem-group">
+  <label for="ticketReleaseRate">Ticket Release Rate:</label>
+  <input id="ticketReleaseRate" formControlName="ticketReleaseRate" type="number" />
+</div>
+
+<div class="elem-group">
+  <label for="releaseInterval">Release Interval in minutes:</label>
+  <input id="releaseInterval" formControlName="releaseInterval" type="number" />
+</div>
+
+  <div class="elem-group">
+  <label for="customerRetrievalRate">Customer Retrieval Rate:</label>
+  <input id="customerRetrievalRate" formControlName="customerRetrievalRate" type="number" />
+</div>
+
+<div class="elem-group">
+  <label for="retrievalInterval">Retrieval Interval in minutes:</label>
+  <input id="retrievalInterval" formControlName="retrievalInterval" type="number" />
+</div>
+
+  <div class="elem-group">
+  <label for="maxTicketCapacity">Max Ticket Capacity:</label>
+  <input id="maxTicketCapacity" formControlName="maxTicketCapacity" type="number" />
+</div>
+
+
+  <button class="pushable" type="submit"><span class="front">Set Configuration</span></button>
+  
+</form>
+</div>
+<style>
+  .front {
+    will-change: transform;
+    transition: transform 250ms;
+  }
+
+  .pushable:hover .front {
+    transform: translateY(-6px);
+  }
+  
+  .pushable:active .front {
+    transform: translateY(-2px);
+  }
+</style>
+<app-control-panel></app-control-panel>

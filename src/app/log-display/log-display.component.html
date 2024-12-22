@@ -1,0 +1,14 @@
+<br><br>
+<h1>System Logs</h1><br><br>
+<!-- <button (click)="refreshLogs()">Refresh Logs</button> -->
+ <div class="logs">
+<div *ngIf="isLoading">Loading logs...</div>
+<div *ngIf="logs.length > 0; else noLogs">
+  <ul>
+    <li *ngFor="let log of logs">{{ log }}</li>
+  </ul>
+</div>
+<ng-template #noLogs>
+  <p>No logs available.</p>
+</ng-template>
+</div>

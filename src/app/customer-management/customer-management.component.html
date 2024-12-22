@@ -1,0 +1,72 @@
+<br><br>
+<h1>Customer Management</h1><br><br>
+
+<!-- Add Customer -->
+<div class="elem-group">
+  <label for="newCustomerName">Add Customer:</label>
+  <input
+    id="newCustomerName"
+    type="text"
+    #customerNameInput
+    placeholder="Enter Customer Name"
+  />
+  <br><br>
+  <button class="pushable1" (click)="addCustomer(customerNameInput.value)"><span class="front1">ADD</span></button>
+</div>
+
+<!-- Display Customers -->
+<div class="details" style="overflow-x: auto;" *ngIf="customers.length > 0; else noCustomers">
+  <h3>Customers List</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Tickets Purchased</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let customer of customers">
+        <td>{{ customer.customerId }}</td>
+        <td>{{ customer.customerName }}</td>
+        <td>{{ customer.ticketsPurchased }}</td>
+        <td>
+          <button class="pushable2" (click)="removeCustomer(customer.customerId)"><span class="front2">Remove</span></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<ng-template #noCustomers>
+  <p>No customers available.</p>
+</ng-template>
+
+<style>
+  .front1 {
+    will-change: transform;
+    transition: transform 250ms;
+  }
+
+  .pushable1:hover .front1 {
+    transform: translateY(-6px);
+  }
+  
+  .pushable1:active .front1 {
+    transform: translateY(-2px);
+  }
+
+  .front2 {
+    will-change: transform;
+    transition: transform 250ms;
+  }
+
+  .pushable2:hover .front2 {
+    transform: translateY(-6px);
+  }
+  
+  .pushable2:active .front2 {
+    transform: translateY(-2px);
+  }
+</style>

@@ -1,0 +1,79 @@
+<div class="control">
+  <br><br>
+<div class="section1">
+<button class="pushable" id="save" (click)="saveConfig()"><span class="front2">Save Configuration</span></button>
+<!-- </div> -->
+<!-- <div id="load"> -->
+<button class="pushable" id="load" (click)="loadConfig()"><span class="front2">Load Configuration</span></button>
+</div>
+
+<br><br>
+<div class="section2">
+<h1>Control Panel</h1>
+<br><br>
+<button class="pushable1" id="start" (click)="startSystem()"><span class="front" id="spstart">Start</span></button>
+<button  class="pushable2" id="stop" (click)="stopSystem()"><span class="front" id="spstop">Stop</span></button>
+<button  class="pushable3" id="reset" (click)="resetSystem()"><span class="front" id="spreset">Reset</span></button>
+</div>
+</div>
+
+
+
+
+<style>
+    .front {
+      will-change: transform;
+      transition: transform 250ms;
+    }
+  
+    .pushable1, #start:hover .front {
+      transform: translateY(-6px);
+    }
+    
+    .pushable1, #start:active .front {
+      transform: translateY(-2px);
+    }
+
+    .front {
+      will-change: transform;
+      transition: transform 250ms;
+    }
+  
+    .pushable2, #stop:hover .front {
+      transform: translateY(-6px);
+    }
+    
+    .pushable2, #stop:active .front {
+      transform: translateY(-2px);
+    }
+
+    .front {
+      will-change: transform;
+      transition: transform 250ms;
+    }
+  
+    .pushable3, #reset:hover .front {
+      transform: translateY(-6px);
+    }
+    
+    .pushable3, #reset:active .front {
+      transform: translateY(-2px);
+    }
+
+    .front2 {
+    will-change: transform;
+    transition: transform 250ms;
+  }
+
+  .pushable:hover .front2{
+    transform: translateY(-6px);
+  }
+  
+  .pushable:active .front2 {
+    transform: translateY(-2px);
+  }
+
+  </style>
+  
+  
+<br /><br />

@@ -1,0 +1,72 @@
+<br><br>
+<h1>Vendor Management</h1><br><br>
+
+<!-- Add Vendor -->
+<div class="elem-group">
+  <label for="newVendorName">Add Vendor:</label>
+  <input
+    id="newVendorName"
+    type="text"
+    #vendorNameInput
+    placeholder="Enter Vendor Name"
+  />
+  <br><br>
+  <button class="pushable1" (click)="addVendor(vendorNameInput.value)"><span class="front1">ADD</span></button>
+</div>
+
+<!-- Display Vendors -->
+<div class="details" *ngIf="vendors.length > 0; else noVendors">
+  <h3>Vendors List</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Tickets Added</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let vendor of vendors">
+        <td>{{ vendor.vendorId }}</td>
+        <td>{{ vendor.vendorName }}</td>
+        <td>{{ vendor.ticketsAdded }}</td>
+        <td>
+          <button class="pushable2" (click)="removeVendor(vendor.vendorId)"><span class="front2">Remove</span></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<ng-template #noVendors>
+  <p>No vendors available.</p>
+</ng-template>
+
+<style>
+  .front1 {
+    will-change: transform;
+    transition: transform 250ms;
+  }
+
+  .pushable1:hover .front1 {
+    transform: translateY(-6px);
+  }
+  
+  .pushable1:active .front1 {
+    transform: translateY(-2px);
+  }
+
+  .front2 {
+    will-change: transform;
+    transition: transform 250ms;
+  }
+
+  .pushable2:hover .front2 {
+    transform: translateY(-6px);
+  }
+  
+  .pushable2:active .front2 {
+    transform: translateY(-2px);
+  }
+</style>

@@ -1,0 +1,131 @@
+  h1{
+    text-align: center;
+    font-family: "Times New Roman",serif;
+  }
+  .control{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+
+  .pushable, #save {
+    float: left;
+  }
+
+  .pushable, #load {
+    float: right;
+  }
+
+  .section1{
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .section2{
+    padding-top: 10%;
+    padding-left: 25%;
+    padding-right: 25%;
+  }
+
+  .section2, h2{
+    text-align: center;
+    padding-bottom: 10%;
+  }
+
+  #start{
+    float: left;
+  }
+
+  #reset{
+    float: right;
+  }
+
+  .pushable {
+    background:  rgb(102, 102, 102);
+    border: none;
+    border-radius: 12px;
+    padding: 0;
+    cursor: pointer;
+  }
+  .front2 {
+    display: block;
+    padding: 12px 42px;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    background: black;
+    color: white;
+    transform: translateY(-4px);
+  }
+  
+  .pushable:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  .pushable1, #start {
+    background: rgb(102, 102, 102);
+    border: none;
+    border-radius: 12px;
+    padding: 0;
+    cursor: pointer;
+  }
+  .front, #spstart {
+    display: block;
+    padding: 12px 42px;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    background: black;
+    color: white;
+    transform: translateY(-4px);
+  }
+  
+  .pushable1, #start:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  .pushable2, #stop {
+    background: rgb(102, 102, 102);
+    border: none;
+    border-radius: 12px;
+    padding: 0;
+    cursor: pointer;
+  }
+  .front, #spstop {
+    display: block;
+    padding: 12px 42px;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    background: black;
+    color: white;
+    transform: translateY(-4px);
+  }
+  
+  .pushable2, #stop:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  .pushable3, #reset {
+    background: rgb(102, 102, 102);
+    border: none;
+    border-radius: 12px;
+    padding: 0;
+    cursor: pointer;
+  }
+  .front, #spreset {
+    display: block;
+    padding: 12px 42px;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    background: black;
+    color: white;
+    transform: translateY(-4px);
+  }
+  
+  .pushable3, #reset:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  
+
+  
